@@ -1,0 +1,36 @@
+{
+    "name": "ericsalerno/relative-time",
+    "description": "Library for building relative time strings in PHP.",
+    "keywords": [
+        "PHP",
+        "Relative Time",
+        "Timestamp"
+    ],
+    "homepage": "http://www.salernolabs.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Salerno",
+            "email": "salernolabs@gmail.com",
+            "homepage": "http://www.ericsalerno.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "salernolabs@gmail.com",
+        "issues": "https://github.com/ericsalerno/relative-time/issues",
+        "source": "https://github.com/ericsalerno/relative-time/releases"
+    },
+    "require":{
+        "php": ">=5.4"
+    },
+    "require-dev":{
+        "phpunit/phpunit": "5.7"
+    },
+    "autoload":{
+        "psr-4": {
+            "SalernoLabs\\RelativeTime\\": "src/",
+            "SalernoLabs\\Tests\\RelativeTime\\": "tests/"
+        }
+    }
+}
