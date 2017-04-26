@@ -19,7 +19,7 @@ Then run the formatter on a DateTime object.
 
 This would output '47 minutes ago'. The formatter will also go forward as well so if you put in '+47 minutes' it will say "47 mintues from now".
 
-### Examples of Time Reformatting
+#### Examples of Time Reformatting
 
 This library will also give short-hand conversational outputs for some values. For example:
 
@@ -43,7 +43,7 @@ Time Modification | Output
 -7 hours          | 7 hours ago
 -3 years          | 3 years ago
 
-### HTML5 Tags
+#### HTML5 Tags
 
 You can easily wrap the output in an html5 time tag by using the getRelativeTimeTag function.
 
@@ -54,3 +54,34 @@ You can easily wrap the output in an html5 time tag by using the getRelativeTime
 This would output:
 
     <time title="April 14th, 2017 - 4:14PM EDT">47 minutes ago</time>
+
+### Relative Time Clock
+
+The relative time clock can give you a textual representation of a time of day.
+
+    $clock = new \SalernoLabs\RelativeTime\Clock();
+
+    $time = $clock
+        ->setTime(new \DateTime('7:47'))
+        ->getTime();
+
+    echo $time; // a quarter to eight o'clock
+
+#### Examples of Relative Clock Output
+
+Input Time | Output
+---------- | ----------
+1:00       | one o'clock
+5:03       | five o'clock,
+2:07       | almost ten after two o'clock,
+3:10       | ten after three o'clock
+4:15       | quarter after four o'clock
+6:22       | almost half past six o'clock
+7:32       | half past seven o'clock
+8:44       | almost a quarter to nine o'clock
+9:45       | a quarter to ten o'clock
+11:55      | almost twelve o'clock
+12:00      | twelve o'clock,
+12:59      | almost one o'clock
+12:45      | a quarter to one o'clock
+12:43      | almost a quarter to one o'clock
