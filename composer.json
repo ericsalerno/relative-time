@@ -1,5 +1,5 @@
 {
-    "name": "ericsalerno/relative-time",
+    "name": "salernolabs/relative-time",
     "description": "Library for building relative time strings in PHP.",
     "keywords": [
         "PHP",
@@ -18,8 +18,8 @@
     ],
     "support": {
         "email": "salernolabs@gmail.com",
-        "issues": "https://github.com/ericsalerno/relative-time/issues",
-        "source": "https://github.com/ericsalerno/relative-time/releases"
+        "issues": "https://github.com/salernolabs/relative-time/issues",
+        "source": "https://github.com/salernolabs/relative-time/releases"
     },
     "require":{
         "php": ">=5.4"

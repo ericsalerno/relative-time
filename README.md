@@ -7,7 +7,7 @@ Library for building relative time strings in PHP.
 
 First include this project with composer
 
-    composer require ericsalerno/relative-time
+    composer require salernolabs/relative-time
 
 ### Formatting Time
 
