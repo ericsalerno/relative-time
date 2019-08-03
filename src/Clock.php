@@ -1,4 +1,6 @@
 <?php
+namespace SalernoLabs\RelativeTime;
+
 /**
  * Build a relative clock time stamp
  *
@@ -6,8 +8,6 @@
  * @subpackage RelativeTime
  * @author Eric Salerno
  */
-namespace SalernoLabs\RelativeTime;
-
 class Clock
 {
     /**

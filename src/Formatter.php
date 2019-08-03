@@ -1,4 +1,6 @@
 <?php
+namespace SalernoLabs\RelativeTime;
+
 /**
  * Build a relative time string from a timestamp
  *
@@ -6,8 +8,6 @@
  * @subpackage RelativeTime
  * @author Eric Salerno
  */
-namespace SalernoLabs\RelativeTime;
-
 class Formatter
 {
     /**
@@ -163,8 +163,10 @@ class Formatter
      */
     public function getRelativeTimeTag(\DateTime $time)
     {
-        $timeString = $this->getRelativeTime($time);
-
-        return '<time title="' . $time->format('F jS, Y - g:iA T') . '">' . $timeString . '</time>';
+        return sprintf(
+            '<time title="%s">%s</time>',
+            $time->format('F jS, Y - g:iA T'),
+            $this->getRelativeTime($time)
+        );
     }
 }

@@ -1,4 +1,6 @@
 <?php
+namespace SalernoLabs\Tests\RelativeTime;
+
 /**
  * Relative Time Test
  *
@@ -6,8 +8,6 @@
  * @subpackage Tests
  * @author Eric Salerno
  */
-namespace SalernoLabs\Tests\RelativeTime;
-
 class FormatterTest extends \PHPUnit\Framework\TestCase
 {
     /**
@@ -120,4 +120,18 @@ class FormatterTest extends \PHPUnit\Framework\TestCase
         ];
     }
 
+    /**
+     * Test get exact seconds
+     * @throws \Exception
+     */
+    public function testGetExactSeconds()
+    {
+        $start = new \DateTime();
+        $end = clone $start;
+        $end->modify('+20 seconds');
+
+        $formatter = new \SalernoLabs\RelativeTime\Formatter();
+        $formatter->setStartDate($start);
+        $this->assertSame('20 seconds from now', $formatter->getRelativeTime($end));
+    }
 }

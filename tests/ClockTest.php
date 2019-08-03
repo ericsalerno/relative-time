@@ -1,4 +1,8 @@
 <?php
+namespace SalernoLabs\Tests\RelativeTime;
+
+use SalernoLabs\RelativeTime\Clock;
+
 /**
  * Clock Test
  *
@@ -6,8 +10,6 @@
  * @subpackage Tests
  * @author Eric Salerno
  */
-namespace SalernoLabs\Tests\RelativeTime;
-
 class ClockTest extends \PHPUnit\Framework\TestCase
 {
     /**
@@ -18,7 +20,7 @@ class ClockTest extends \PHPUnit\Framework\TestCase
      */
     public function testClockTime($time, $expectedOutput)
     {
-        $clock = new \SalernoLabs\RelativeTime\Clock();
+        $clock = new Clock();
 
         $clock->setTime(new \DateTime($time));
 
@@ -48,5 +50,14 @@ class ClockTest extends \PHPUnit\Framework\TestCase
             ['12:45', 'a quarter to one o\'clock'],
             ['12:43', 'almost a quarter to one o\'clock']
         ];
+    }
+
+    /**
+     * Test empty timestamp (right now) usage returns something
+     */
+    public function testEmptyTimestamp()
+    {
+        $clock = new Clock();
+        $this->assertNotEmpty($clock->getTime());
     }
 }

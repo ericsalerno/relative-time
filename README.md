@@ -1,4 +1,9 @@
-# relative-time
+# salernolabs/relative-time
+
+[![Latest Stable Version](https://poser.pugx.org/salernolabs/relative-time/v/stable)](https://packagist.org/packages/salernolabs/relative-time)
+[![License](https://poser.pugx.org/salernolabs/relative-time/license)](https://packagist.org/packages/salernolabs/relative-time)
+[![Build Status](https://travis-ci.com/salernolabs/relative-time.svg?branch=master)](https://travis-ci.org/salernolabs/relative-time)
+
 Library for building relative time strings in PHP.
 
 ## Usage
